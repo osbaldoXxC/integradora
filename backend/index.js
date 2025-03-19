@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./server/db.js');
 const app = express();
-
+const puestoRoutes = require('./routes/puestoRoutes');
+app.use('/api/puestos', puestoRoutes);
 app.use(cors());
 app.use(express.json());
 
