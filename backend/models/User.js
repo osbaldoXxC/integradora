@@ -7,11 +7,15 @@ const UserSchema = new mongoose.Schema({
   telefono: { type: String, required: true },
   fecha_registro: { type: Date, default: Date.now },
   password: { type: String, required: true },
-  roles_id: { 
+  roles_id: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Role', 
-    required: true 
-  }
+    ref: 'Role',
+    required: true,
+  },
+  puesto_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Puesto',
+  },
 });
 
 module.exports = mongoose.model('User', UserSchema, 'usuarios');

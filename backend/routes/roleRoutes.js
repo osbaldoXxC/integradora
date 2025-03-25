@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Role = require('../models/Role');
+const mongoose = require('mongoose'); // 👈 Esta línea faltaba
 
 // Endpoint para obtener todos los roles
 router.get('/', async (req, res) => {

@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const TipoCorte = require('../models/TipoCorte');
+const mongoose = require('mongoose'); // 👈 Esta línea faltaba
+
 
 router.get('/', async (req, res) => {
   try {
